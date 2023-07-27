@@ -36,7 +36,7 @@ pipeline {
          stage('Running the docker container') {
             steps {
                   sh 'docker container rm --force fe'
-                  sh 'docker run -dt -p 80:3000 --name fe gopal99489/frontend-lms'
+                  sh 'docker run -dt -p 3000:80 --name fe gopal99489/frontend-lms'
             }
         }
     }
